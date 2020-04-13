@@ -1,0 +1,68 @@
+body {
+  font-family: 'Acme', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.page_wrapper header {
+  widows: 100vw;
+  height: 100vh;
+  background: darkslategray;
+  background: -webkit-gradient(linear, right bottom, left top, color-stop(50%, honeydew), color-stop(50%, darkslategray));
+  background: linear-gradient(to top left, honeydew 50%, darkslategray 50%);
+}
+
+.page_wrapper header .logo {
+  border-radius: 100%;
+  margin: 45px;
+  width: 100px;
+}
+
+.page_wrapper header .title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: honeydew;
+  font-size: 72px;
+  font-weight: 900;
+}
+
+.page_wrapper header .title .left {
+  -webkit-transform: translate(-69%, 50%);
+          transform: translate(-69%, 50%);
+}
+
+.page_wrapper header .title .right {
+  color: darkslategray;
+  -webkit-transform: translate(69%, -50%);
+          transform: translate(69%, -50%);
+}
+
+.page_wrapper header [class*="sub-title"] {
+  color: honeydew;
+  font-size: 32px;
+  font-weight: 100;
+}
+
+.page_wrapper header .sub-title-top {
+  position: absolute;
+  left: 49%;
+  top: 40%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  color: honeydew;
+  font-size: 32px;
+  font-weight: 100;
+}
+
+.page_wrapper header .sub-title-bottom {
+  position: absolute;
+  left: 49%;
+  top: 55%;
+  color: lightseagreen;
+  font-size: 32px;
+  font-weight: 100;
+}
+/*# sourceMappingURL=style.css.map */
