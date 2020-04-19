@@ -1,0 +1,130 @@
+#youtube{
+    background: linear-gradient(to top, $yt-red 50%, $dark 50%);
+    grid-template-columns: 200px 1fr 1fr 200px;
+    grid-template-rows: 200px 1fr 200px;
+    grid-column: 2/4;
+
+
+    .heading{
+        color: red;
+        grid-column: 2/4;
+     
+        @media screen and (max-width:768px) {
+            grid-column: auto;
+        }
+        @media screen and (max-width:660px) {
+            grid-column: auto ;
+        }
+        @media screen and (max-width:360px) {
+            grid-column: auto;
+            
+        }
+    }
+    h3{
+        color: $primary;
+        font-size: 32px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+
+
+     
+
+        @media screen and (max-width:1366px) {
+            font-size: 28px;
+            grid-column: auto;
+        }
+        @media screen and (max-width:1280px) {
+            font-size: 22px;
+            grid-column: auto;
+        }
+      
+    }
+    .description{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding: 16px;
+        box-sizing: border-box;
+        color: $light;
+        justify-self: center;
+        width: 70%;
+        max-width: 640px;
+        font-size: 20px;
+        a{
+            text-decoration: none;
+        }
+        @media screen and (max-width:1366px) {
+            font-size: 22px;
+        }
+        @media screen and (max-width:1280px) {
+            font-size: 18px;
+        }
+        @media screen and (max-width:768px) {
+            grid-column: auto;
+            
+        }
+        @media screen and (max-width:300px) {
+          grid-column: auto;
+           
+        }
+    }
+    .latest-video{
+        grid-column: 3/4;
+        grid-row: 2/3;
+        padding: 20px;
+        box-sizing: border-box;
+        .thumbnail{
+            display: block;
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        @media screen and (max-width:768px) {
+            grid-column: auto;
+            
+        }
+      
+    }
+    .channel{
+        grid-column: 1/5;
+        grid-row: 3/4;
+        .yt-link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .yt-logo{
+                width: 400px;
+
+            }
+            p{
+                color: $light;
+                font-size: 22px;
+                margin-left: 25px;
+
+            }
+            @media screen and (max-width:768px) {
+                grid-column: auto;
+                grid-row: auto;
+            }
+            @media screen and (max-width:1366px) {
+                font-size: 22px;
+                
+            }
+            @media screen and (max-width:1024px) {
+                grid-template-columns: 125px 1fr 1fr 125px;
+            }
+            @media screen and (max-width:768px) {
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+               
+            }
+        }
+
+    }
+    @media screen and (max-width:640px) {
+       height: auto;
+       width: auto;
+       
+    }
+}
