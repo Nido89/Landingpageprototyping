@@ -10,7 +10,7 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <!-- Style Sheet-->
-    <link rel="stylesheet" href="./Website/assets/scss/style.css">
+    <link rel="stylesheet" href="./Website/assets/scss/main.css">
 </head>
 
 <body>
@@ -29,24 +29,24 @@
 
     <header class="section" data-color="dark">
         <image src="./Website/assets/images/logo.png" alt="JN" class="logo">
-        <label for="hamburger">
-            <input type="checkbox" name="hamburger" id="hamburger">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <label for="hamburger">
+                <input type="checkbox" name="hamburger" id="hamburger">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </label>
+            <div class="title-container">
+                <h2 class="sub-title top">A Software Developer</h2>
+                <h1 class="title"></h1>
+                <span class="dark">Naveed</span>
+                <span class="primary">Jalal</span>
+
+                <!-- <h1>Jalal Naveed</h1> -->
+
+                <h2 class="sub-title bottom">A Passionate Coder</h2>
             </div>
-        </label>
-        <div class="title-container">
-            <h2 class="sub-title top">A Software Developer</h2>
-            <h1 class="title"></h1>
-            <span class="dark">Naveed</span>
-            <span class="primary">Jalal</span>
-
-            <!-- <h1>Jalal Naveed</h1> -->
-
-            <h2 class="sub-title bottom">A Passionate Coder</h2>
-        </div>
 
     </header>
 
@@ -68,6 +68,13 @@
             <div class="bubble"></div>
             <div class="bubble"></div>
         </div>
+
+        <div class="social-media-icons">
+            <div class="icon youtube"></div>
+            <div class="icon facebook"></div>
+            <div class="icon instagram"></div>
+            <div class="icon tiktok"></div>
+        </div>
     </section>
 
     <section class="section" id="projects" data-color="light">
@@ -77,89 +84,87 @@
         <div class="project-grid">
 
             <div class="project col-2">
-                <div 
-                class="image"
-                 style="background-image: url('./Website/assets/images/projects/Tenserflow.png')"></div>
+                <div class="image" style="background-image: url('./Website/assets/images/projects/Tenserflow.png')">
+                </div>
                 <h3 href="#" class="isProject">Machine Learning-Tenserflow</h3>
             </div>
-            
+
             <div class="project col-2 row-2">
-                <div 
-                class="image" 
-                style="background-image: url('./Website/assets/images/projects/djangoecom.png')"></div>
+                <div class="image" style="background-image: url('./Website/assets/images/projects/djangoecom.png')">
+                </div>
                 <h3 href="#" class="isProject">Django-Ecommerce</h3>
             </div>
             <div class="project">
-                <div 
-                class="image"
+                <div class="image"
                     style="background-image: url('./Website/assets/images/projects/masterthesisrobot.png')"></div>
                 <h3 href="#" class="isProject">RoboticsIntelligence-Webots</h3>
             </div>
             <div class="project row-2">
-                <div 
-                class="image" 
-                style="background-image: url('./Website/assets/images/projects/reactjsmovieapp.png')">
+                <div class="image"
+                    style="background-image: url('./Website/assets/images/projects/reactjsmovieapp.png')">
                 </div>
                 <h3 href="#" class="isProject">MovieInfoReactJs</h3>
             </div>
             <div class="project">
-                <div 
-                class="image" 
-                style="background-image: url('./Website/assets/images/projects/Snakegame.png')"></div>
+                <div class="image" style="background-image: url('./Website/assets/images/projects/Snakegame.png')">
+                </div>
                 <h3 href="#" class="isProject">ESLint SnakeGame</h3>
             </div>
             <div class="project">
-                <div 
-                class="image" 
-                style="background-image: url('./Website/assets/images/projects/jsvirtualapp.png')">
+                <div class="image" style="background-image: url('./Website/assets/images/projects/jsvirtualapp.png')">
                 </div>
                 <h3 href="#" class="isProject">A.I Notes App</h3>
             </div>
             <div class="project">
-                <div 
-                class="image" 
-                style="background-image: url('./Website/assets/images/projects/Mevnstackchatapp.png')">
+                <div class="image"
+                    style="background-image: url('./Website/assets/images/projects/Mevnstackchatapp.png')">
                 </div>
                 <h3 href="#" class="isProject">MEVNStack-ChatApp</h3>
             </div>
-            <div class="project" >
-                <div 
-                class="image" 
-                style="background-image: url('./Website/assets/images/projects/LAMPStack-Chatapp.png')">
+            <div class="project">
+                <div class="image"
+                    style="background-image: url('./Website/assets/images/projects/LAMPStack-Chatapp.png')">
                 </div>
                 <h3 href="#" class="isProject">LAMPStack-ChatApp</h3>
             </div>
             <div class="project">
-                <div 
-                class="image" 
-                style="background-image: url('./Website/assets/images/projects/Djangoblog.png')">
+                <div class="image" style="background-image: url('./Website/assets/images/projects/Djangoblog.png')">
                 </div>
                 <h3 href="#" class="isProject">Django-BlogApp</h3>
             </div>
         </div>
     </section>
+
+
     <section class="section" id="youtube" data-color="light">
         <h2 class="heading">Youtube</h2>
         <div class="description">
-            I am not just a software-developer but also a youtuber. <br>During my free time i create different youtube workout videos to help other fellow developers to stay fit and healthy while coding.<br> A sound body has a sound mind so it is very important to stay fit and healthy while you code.<br>
-            I am currently working on staying fit while anywhere <a href="#" class="content"><b>#FitAnywhere</b> </a>video series.
+            I am not just a software-developer but also a youtuber. <br>During my free time i create different youtube
+            workout videos to help other fellow developers to stay fit and healthy while coding.<br> A sound body has a
+            sound mind.<br>
+            I am currently working on staying fit while anywhere <a href="#" class="content"><b>#FitAnywhere</b>
+            </a>video series.
         </div>
         <div class="latest-video">
-            <a href="#">
-            <img src="./Website/assets/images/youtube/youtube-thumbnail.png" alt="Latest Youtube Video" class="yt-thumbnail">
-            </a>
+            <a href="">
+                <img
+                     src="./Website/assets/images/youtube/youtube-thumbnail.png" 
+                     alt="Latest Youtube Video"
+                    class="thumbnail"
+                    />
+            </a>            
             <h3>Latest Videos</h3>
         </div>
         <div class="channel">
             <h3>Checkout my Channel</h3>
             <div class="yt-link">
-             <img src="./Website/assets/images/youtube/youtube-logo.png" alt="youtube" class="yt-logo" />
-             <p>Nido</p>
+                <img src="./Website/assets/images/youtube/youtube-logo.png" alt="youtube" class="yt-logo" />
+                <p>Nido</p>
             </div>
         </div>
     </section>
 
-</body>
-<script src="./Website/assets/js/main.js"></script>
 
+    <script src="./Website/assets/js/main.js"></script>   
+    </body>
 </html>

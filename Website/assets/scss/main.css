@@ -40,8 +40,8 @@ body {
 
 .navbar {
   position: fixed;
-  left: 30px;
   top: 50%;
+  left: 30px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 999;
@@ -52,22 +52,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .navbar .navbar__link {
   margin: 0 15px 30px;
   color: lightseagreen;
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 100;
   text-decoration: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -75,7 +72,7 @@ body {
 
 .navbar .navbar__link:hover {
   color: lightseagreen;
-  border-bottom: 5px solid darkslategray;
+  border-bottom: 5px solid lightseagreen;
 }
 
 .navbar .navbar__link.light {
@@ -83,27 +80,15 @@ body {
 }
 
 .navbar .navbar__link.light:hover {
-  border-bottom: 2px solid lightseagreen;
-}
-
-@media screen and (max-width: 1280px) {
-  .navbar {
-    left: 0px;
-  }
-  .navbar .navbar__link {
-    font: size 20px;
-  }
+  border-bottom: 2px solid #008cdd;
 }
 
 @media screen and (max-width: 860px) {
-  .navbar .navbar__link {
-    font: size 22px;
+  .navbar {
+    left: 15px;
   }
-}
-
-@media screen and (max-width: 360px) {
   .navbar .navbar__link {
-    font: size 24px;
+    font: size 18px;
   }
 }
 
@@ -119,6 +104,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    display: block;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, darkslategray), color-stop(50%, honeydew));
@@ -128,8 +114,8 @@ body {
     left: 0vw;
   }
   .navbar .navbar__link {
-    color: darkslategray;
-    font-size: 20px;
+    color: lightseagreen;
+    font-size: 14px;
   }
 }
 
@@ -164,32 +150,6 @@ body {
   margin: 30px 0px 0px;
 }
 
-@media screen and (max-width: 860px) {
-  .heading {
-    font-size: 60px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .heading {
-    font-size: 42px;
-  }
-}
-
-.heading .heading {
-  color: honeydew;
-}
-
-@media screen and (max-width: 640px) {
-  .heading {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .heading .heading {
-    grid-column: span 2;
-  }
-}
-
 @media screen and (max-width: 768px) {
   header {
     background: -webkit-gradient(linear, left darkslategray 50%, color-stop(50%, lightseagreen));
@@ -204,77 +164,6 @@ header .logo {
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   border-radius: 44%;
-}
-
-header label {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  top: 30px;
-  right: 30px;
-  width: 45px;
-  height: 23px;
-}
-
-header label input {
-  display: none;
-}
-
-header label input:checked ~ .hamburger span {
-  margin: 0;
-  -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-
-header label input:checked ~ .hamburger span:first-child {
-  -webkit-transform-origin: 75%, 0%;
-          transform-origin: 75%, 0%;
-  -webkit-transform: rotate(295deg);
-          transform: rotate(295deg);
-}
-
-header label input:checked ~ .hamburger span:nth-child(2) {
-  opacity: 0;
-}
-
-header label input:checked ~ .hamburger span:last-of-type {
-  -webkit-transform-origin: 75%, 100%;
-          transform-origin: 75%, 100%;
-  -webkit-transform: rotate(-295deg);
-          transform: rotate(-295deg);
-}
-
-header label .hamburger span {
-  display: block;
-  width: 100%;
-  height: 5px;
-  margin-bottom: 4px;
-  border-radius: 3px;
-  background: lightseagreen;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-
-header label .hamburger span:last-of-type {
-  margin-bottom: 0px;
-}
-
-@media screen and (max-width: 768px) {
-  header label {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  header label {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  header label {
-    display: block;
-  }
 }
 
 header .title-container {
@@ -349,6 +238,80 @@ header .title-container .sub-title.primary {
   }
 }
 
+header label {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 30px;
+  right: 30px;
+  width: 45px;
+  height: 23px;
+}
+
+header label input {
+  display: none;
+}
+
+header label input:checked ~ .hamburger span {
+  margin: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+header label input:checked ~ .hamburger span:first-child {
+  -webkit-transform-origin: 75%, 0%;
+          transform-origin: 75%, 0%;
+  -webkit-transform: rotate(295deg);
+          transform: rotate(295deg);
+}
+
+header label input:checked ~ .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+header label input:checked ~ .hamburger span:last-of-type {
+  -webkit-transform-origin: 75%, 100%;
+          transform-origin: 75%, 100%;
+  -webkit-transform: rotate(-295deg);
+          transform: rotate(-295deg);
+}
+
+header label .hamburger span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin-bottom: 4px;
+  border-radius: 3px;
+  background: lightseagreen;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+header label .hamburger span:last-of-type {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  header label {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header label {
+    display: block;
+  }
+}
+
+#about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+  -ms-grid-rows: 1fr 3fr 1fr;
+      grid-template-rows: 1fr 3fr 1fr;
+}
+
 #about .content {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -361,6 +324,8 @@ header .title-container .sub-title.primary {
   border-radius: 50%;
   padding: 50px;
   background: darkslategray;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
   justify-self: center;
   -ms-flex-item-align: center;
       align-self: center;
@@ -381,18 +346,18 @@ header .title-container .sub-title.primary {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: 1/4;
-    width: 370px;
-    height: 370px;
-    padding: 5px;
+    width: 300px;
+    height: 320px;
+    padding: 40px;
   }
 }
 
 #about .content p {
-  margin-top: 6px;
   color: honeydew;
   font-size: 23px;
   font-weight: 100;
-  text-align: center;
+  text-align: justify;
+  margin-top: 6px;
 }
 
 #about .content p strong {
@@ -434,7 +399,7 @@ header .title-container .sub-title.primary {
   width: 100px;
   height: 100px;
   left: 100%;
-  top: 60%;
+  top: 80%;
   -webkit-transform: translateX(-80%);
           transform: translateX(-80%);
 }
@@ -448,9 +413,116 @@ header .title-container .sub-title.primary {
           transform: translateX(60%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
   #about .content .bubble {
-    display: none;
+    display: block;
+  }
+}
+
+#about .icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: lightseagreen;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+  -webkit-animation: sinkOut 0.5s forwards;
+          animation: sinkOut 0.5s forwards;
+}
+
+#about .icon:hover {
+  -webkit-animation: sinkIn 0.5s forwards;
+          animation: sinkIn 0.5s forwards;
+}
+
+#about .icon.youtube {
+  top: 150px;
+  left: 250px;
+  background-image: url("/Website/assets/images/about/youtube.png");
+  background-size: contain;
+}
+
+#about .icon.facebook {
+  bottom: 150px;
+  left: 230px;
+  background-image: url("/Website/assets/images/about/facebook.png");
+  background-size: 200;
+}
+
+#about .icon.instagram {
+  bottom: 150px;
+  right: 250px;
+  background-image: url("/Website/assets/images/about/instagram.png");
+  background-size: 700;
+}
+
+#about .icon.tiktok {
+  top: 150px;
+  right: 250px;
+  background-image: url("/Website/assets/images/about/tiktok.png");
+  background-size: contain;
+}
+
+@-webkit-keyframes sinkIn {
+  0% {
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    -webkit-box-shadow: insert 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: insert 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes sinkIn {
+  0% {
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    -webkit-box-shadow: insert 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: insert 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@-webkit-keyframes sinkOut {
+  0% {
+    -webkit-box-shadow: insert 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: insert 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes sinkOut {
+  0% {
+    -webkit-box-shadow: insert 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: insert 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -467,7 +539,7 @@ header .title-container .sub-title.primary {
       grid-template-columns: repeat(4, 350px);
   -ms-grid-rows: (196px)[3];
       grid-template-rows: repeat(3, 196px);
-  grid-gap: 15px;
+  grid-gap: 20px;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-grid-row-align: center;
@@ -491,11 +563,11 @@ header .title-container .sub-title.primary {
 }
 
 #projects .project-grid .project.col-2 {
-  grid-column: span 2;
+  grid-column: span 1;
 }
 
 #projects .project-grid .project.row-2 {
-  grid-row: span 2;
+  grid-row: span 1;
 }
 
 #projects .project-grid .project .image {
@@ -547,8 +619,8 @@ header .title-container .sub-title.primary {
   #projects .project-grid {
     -ms-grid-columns: (300px)[4];
         grid-template-columns: repeat(4, 300px);
-    -ms-grid-rows: 3, 169px;
-        grid-template-rows: 3, 169px;
+    -ms-grid-rows: 6, 168px;
+        grid-template-rows: 6, 168px;
   }
 }
 
@@ -556,20 +628,20 @@ header .title-container .sub-title.primary {
   #projects .project-grid {
     -ms-grid-columns: (230px)[4];
         grid-template-columns: repeat(4, 230px);
-    -ms-grid-rows: 3, 129px;
-        grid-template-rows: 3, 129px;
+    -ms-grid-rows: 6, 129px;
+        grid-template-rows: 6, 129px;
   }
   #projects .project-grid .project h3 {
     font-size: 32px;
   }
 }
 
-@media screen and (max-width: 1336px) {
+@media screen and (max-width: 1366px) {
   #projects .project-grid {
     -ms-grid-columns: (200px)[4];
         grid-template-columns: repeat(4, 200px);
-    -ms-grid-rows: 3, 112px;
-        grid-template-rows: 3, 112px;
+    -ms-grid-rows: 6, 112px;
+        grid-template-rows: 6, 112px;
   }
   #projects .project-grid .project h3 {
     font-size: 22px;
@@ -587,10 +659,10 @@ header .title-container .sub-title.primary {
 
 @media screen and (max-width: 768px) {
   #projects .project-grid {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: 6, 150px;
-        grid-template-rows: 6, 150px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 10, 150px;
+        grid-template-rows: 10, 150px;
     width: 100%;
     grid-column: span 1;
     padding: 20px;
@@ -598,7 +670,7 @@ header .title-container .sub-title.primary {
             box-sizing: border-box;
   }
   #projects .project-grid .project h3 {
-    font-size: 34px;
+    font-size: 32px;
   }
   #projects .project-grid .project.col-2 {
     grid-column: span 1;
@@ -612,8 +684,8 @@ header .title-container .sub-title.primary {
   #projects .project-grid {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    -ms-grid-rows: 9, 250px;
-        grid-template-rows: 9, 250px;
+    -ms-grid-rows: 10, 550px;
+        grid-template-rows: 10, 550px;
   }
 }
 
@@ -630,7 +702,7 @@ header .title-container .sub-title.primary {
         grid-template-columns: 1fr;
   }
   #projects .heading {
-    grid-column: span 1;
+    grid-column: auto;
   }
 }
 
@@ -647,9 +719,6 @@ header .title-container .sub-title.primary {
       grid-template-columns: 200px 1fr 1fr 200px;
   -ms-grid-rows: 200px 1fr 200px;
       grid-template-rows: 200px 1fr 200px;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2/4;
 }
 
 #youtube .heading {
@@ -662,41 +731,16 @@ header .title-container .sub-title.primary {
 @media screen and (max-width: 768px) {
   #youtube .heading {
     grid-column: auto;
-  }
-}
-
-@media screen and (max-width: 660px) {
-  #youtube .heading {
-    grid-column: auto;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  #youtube .heading {
-    grid-column: auto;
+    grid-row: auto;
   }
 }
 
 #youtube h3 {
-  color: honeydew;
+  color: lightseagreen;
   font-size: 32px;
   text-align: center;
   margin: 0;
   padding: 0;
-}
-
-@media screen and (max-width: 1366px) {
-  #youtube h3 {
-    font-size: 28px;
-    grid-column: auto;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  #youtube h3 {
-    font-size: 22px;
-    grid-column: auto;
-  }
 }
 
 #youtube .description {
@@ -706,42 +750,29 @@ header .title-container .sub-title.primary {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  padding: 16px;
+  padding: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: lightseagreen;
   -ms-grid-column-align: center;
       justify-self: center;
-  width: 70%;
-  max-width: 640px;
-  font-size: 20px;
+  width: 100%;
+  max-width: 620px;
+  font-size: 18px;
+  text-align: justify;
 }
 
 #youtube .description a {
   text-decoration: none;
-}
-
-@media screen and (max-width: 1366px) {
-  #youtube .description {
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  #youtube .description {
-    font-size: 18px;
-  }
+  width: 50%;
+  height: 50%;
+  max-width: 520px;
 }
 
 @media screen and (max-width: 768px) {
   #youtube .description {
     grid-column: auto;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  #youtube .description {
-    grid-column: auto;
+    grid-row: auto;
   }
 }
 
@@ -752,7 +783,7 @@ header .title-container .sub-title.primary {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  padding: 20px;
+  padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -760,13 +791,14 @@ header .title-container .sub-title.primary {
 #youtube .latest-video .thumbnail {
   display: block;
   width: 100%;
-  max-width: 640px;
+  max-width: 420px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
   #youtube .latest-video {
     grid-column: auto;
+    grid-row: auto;
   }
 }
 
@@ -792,37 +824,24 @@ header .title-container .sub-title.primary {
 }
 
 #youtube .channel .yt-link .yt-logo {
-  width: 400px;
+  width: 220px;
 }
 
 #youtube .channel .yt-link p {
   color: lightseagreen;
   font-size: 22px;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
 @media screen and (max-width: 768px) {
-  #youtube .channel .yt-link {
+  #youtube .channel {
     grid-column: auto;
     grid-row: auto;
   }
 }
 
-@media screen and (max-width: 1366px) {
-  #youtube .channel .yt-link {
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #youtube .channel .yt-link {
-    -ms-grid-columns: 125px 1fr 1fr 125px;
-        grid-template-columns: 125px 1fr 1fr 125px;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  #youtube .channel .yt-link {
+  #youtube {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     -ms-grid-rows: auto;
@@ -833,7 +852,6 @@ header .title-container .sub-title.primary {
 @media screen and (max-width: 640px) {
   #youtube {
     height: auto;
-    width: auto;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
