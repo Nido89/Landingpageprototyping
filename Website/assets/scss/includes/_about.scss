@@ -1,7 +1,7 @@
 #about {
-   display:grid;
-   grid-template-columns: 1fr 3fr 1fr;
-   grid-template-rows: 1fr 3fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
 
     .content {
         grid-column: 2/3;
@@ -25,11 +25,18 @@
         align-items: center;
 
         @media screen and (max-width:768px) {
-            grid-column: 1/4;
+            grid-column: 2/3;
+          
             width: 300px;
-            height: 320px;
+            height: 300px;
             padding: 40px;
         }
+        @media screen and (max-width:640px) {
+            grid-column: 1/2;
+            width: 270px;
+            height: 270px;
+        }
+
 
         p {
             color: $primary;
@@ -95,74 +102,138 @@
             }
         }
     }
+    .social-media-icons{
+        @media screen and (max-width: 640px){
+            grid-column: 1/2;
+            grid-row: 3/4;
 
-    .icon {
-        
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        position: absolute;
-        background-color: $light;
-
-
-        background-repeat: no-repeat;
-        background-position: center;
-        box-shadow: 0px 0px 25px 0px rgba($color: #000000, $alpha: 0.5);
-
-
-        animation: sinkOut 0.5s forwards;
-
-        &:hover {
-
-            animation: sinkIn 0.5s forwards;
-
-
+            display: flex;
+            justify-content: space-around;
         }
+        .icon {
 
-        
-         
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: $light;
+    
+    
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: 0px 0px 25px 0px rgba($color: #000000, $alpha: 0.5);
+    
+    
+            animation: sinkOut 0.5s forwards;
+    
+            &:hover {
+    
+                animation: sinkIn 0.5s forwards;
+    
+    
+            }
+    
+            &.youtube {
+                top: 200px;
+                left: 550px;
+    
+    
+                background-image: url('/Website/assets/images/about/youtube.png');
+                background-size: contain;
+    
+            }
+    
+            &.facebook {
+                bottom: 200px;
+                left: 550px;
+    
+                background-image: url('/Website/assets/images/about/facebook.png');
+                background-size: 150px;
+    
+            }
+    
+            &.instagram {
+                bottom: 200px;
+                right: 550px;
+    
+                background-image: url('/Website/assets/images/about/instagram.png');
+                background-size: 100px;
+    
+            }
+    
+            &.tiktok {
+                top: 200px;
+                right: 550px;
+    
+    
+                background-image: url('/Website/assets/images/about/tiktok.png');
+                background-size: contain;
+    
+            }
+    
+            @media screen and (max-width:1024px) {
+                &.youtube {
+                    top: 400px;
+                    left: 250px;
+                }
+    
+                &.facebook {
+                    bottom: 400px;
+                    left: 250px;
+                }
+    
+                &.instagram {
+                    bottom: 400px;
+                    right: 250px;
+                }
+    
+                &.tiktok {
+                    top: 400px;
+                    right: 250px;
+                }
+            }
+    
+            @media screen and (max-width:768px) {
+                &.youtube {
+                    top: 300px;
+                    left: 90px;
+                }
+    
+                &.facebook {
+                    bottom: 400px;
+                    left: 90px;
+                }
+    
+                &.instagram {
+                    bottom: 400px;
+                    right: 90px;
+                }
+    
+                &.tiktok {
+                    top: 300px;
+                    right: 90px;
+                }
+            }
+    
+            @media screen and (max-width:640px) {
+                position: relative;
+                width: 75px;
+                height: 75px;
+                
 
-        &.youtube {
-            top: 150px;
-            left: 250px;
-
-
-            background-image: url('/Website/assets/images/about/youtube.png');
-            background-size: contain;
-
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+            }
+    
         }
-
-        &.facebook {
-            bottom: 150px;
-            left: 230px;
-
-            background-image: url('/Website/assets/images/about/facebook.png');
-            background-size: 200;
-
-        }
-
-        &.instagram {
-            bottom: 150px;
-            right: 250px;
-
-            background-image: url('/Website/assets/images/about/instagram.png');
-            background-size: 700;
-
-        }
-
-        &.tiktok {
-            top: 150px;
-            right: 250px;
-
-
-            background-image: url('/Website/assets/images/about/tiktok.png');
-            background-size: contain;
-
-        }
-      
     }
+   
 
 }
+
+
 
 @keyframes sinkIn {
     0% {

@@ -6,7 +6,7 @@ body {
   font-family: 'Acme', sans-serif;
 }
 
-.top {
+body .top {
   -ms-flex-item-align: start;
       align-self: flex-start;
   color: honeydew;
@@ -14,31 +14,31 @@ body {
   font-weight: 900;
 }
 
-.bottom {
+body .bottom {
   color: darkslategray;
   font-size: 55px;
   font-weight: 900;
 }
 
-.primary {
+body .primary {
   font-size: 102px;
   font-weight: 900;
   color: darkslategray;
   line-height: 0.7;
 }
 
-.dark {
+body .dark {
   font-size: 102px;
   font-weight: 900;
   color: honeydew;
   line-height: 0.7;
 }
 
-.light {
+body .light {
   color: lightseagreen;
 }
 
-.navbar {
+body .navbar {
   position: fixed;
   top: 50%;
   left: 30px;
@@ -60,7 +60,7 @@ body {
           align-items: flex-start;
 }
 
-.navbar .navbar__link {
+body .navbar .navbar__link {
   margin: 0 15px 30px;
   color: lightseagreen;
   font-size: 28px;
@@ -70,30 +70,30 @@ body {
           box-sizing: border-box;
 }
 
-.navbar .navbar__link:hover {
+body .navbar .navbar__link:hover {
   color: lightseagreen;
   border-bottom: 5px solid lightseagreen;
 }
 
-.navbar .navbar__link.light {
+body .navbar .navbar__link.light {
   color: lightseagreen;
 }
 
-.navbar .navbar__link.light:hover {
+body .navbar .navbar__link.light:hover {
   border-bottom: 2px solid #008cdd;
 }
 
 @media screen and (max-width: 860px) {
-  .navbar {
+  body .navbar {
     left: 15px;
   }
-  .navbar .navbar__link {
+  body .navbar .navbar__link {
     font: size 18px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .navbar {
+  body .navbar {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -104,22 +104,24 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, darkslategray), color-stop(50%, honeydew));
     background: linear-gradient(to right, darkslategray 50%, honeydew 50%);
   }
-  .navbar.active {
+  body .navbar.active {
     left: 0vw;
   }
-  .navbar .navbar__link {
+  body .navbar .navbar__link {
     color: lightseagreen;
-    font-size: 14px;
+    font-size: 28px;
   }
 }
 
-.section {
+body .section {
   width: 100vw;
   height: 100vh;
   background: darkslategray;
@@ -133,12 +135,12 @@ body {
       grid-template-rows: 150px auto 150px;
 }
 
-.section:nth-child(odd) {
+body .section:nth-child(odd) {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, darkslategray), color-stop(50%, honeydew));
   background: linear-gradient(to top, darkslategray 50%, honeydew 50%);
 }
 
-.heading {
+body .heading {
   color: lightseagreen;
   font-size: 72px;
   font-weight: 900;
@@ -148,6 +150,17 @@ body {
   -ms-grid-column-span: 1;
   grid-column: 2/3;
   margin: 30px 0px 0px;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    height: auto;
+  }
+  body .heading {
+    grid-column: span 2;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -343,12 +356,22 @@ header label .hamburger span:last-of-type {
 
 @media screen and (max-width: 768px) {
   #about .content {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1/4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
     width: 300px;
-    height: 320px;
+    height: 300px;
     padding: 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #about .content {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    width: 270px;
+    height: 270px;
   }
 }
 
@@ -419,11 +442,27 @@ header label .hamburger span:last-of-type {
   }
 }
 
-#about .icon {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+@media screen and (max-width: 640px) {
+  #about .social-media-icons {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+#about .social-media-icons .icon {
   position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   background-color: lightseagreen;
   background-repeat: no-repeat;
   background-position: center;
@@ -433,37 +472,87 @@ header label .hamburger span:last-of-type {
           animation: sinkOut 0.5s forwards;
 }
 
-#about .icon:hover {
+#about .social-media-icons .icon:hover {
   -webkit-animation: sinkIn 0.5s forwards;
           animation: sinkIn 0.5s forwards;
 }
 
-#about .icon.youtube {
-  top: 150px;
-  left: 250px;
+#about .social-media-icons .icon.youtube {
+  top: 200px;
+  left: 550px;
   background-image: url("/Website/assets/images/about/youtube.png");
   background-size: contain;
 }
 
-#about .icon.facebook {
-  bottom: 150px;
-  left: 230px;
+#about .social-media-icons .icon.facebook {
+  bottom: 200px;
+  left: 550px;
   background-image: url("/Website/assets/images/about/facebook.png");
-  background-size: 200;
+  background-size: 150px;
 }
 
-#about .icon.instagram {
-  bottom: 150px;
-  right: 250px;
+#about .social-media-icons .icon.instagram {
+  bottom: 200px;
+  right: 550px;
   background-image: url("/Website/assets/images/about/instagram.png");
-  background-size: 700;
+  background-size: 100px;
 }
 
-#about .icon.tiktok {
-  top: 150px;
-  right: 250px;
+#about .social-media-icons .icon.tiktok {
+  top: 200px;
+  right: 550px;
   background-image: url("/Website/assets/images/about/tiktok.png");
   background-size: contain;
+}
+
+@media screen and (max-width: 1024px) {
+  #about .social-media-icons .icon.youtube {
+    top: 400px;
+    left: 250px;
+  }
+  #about .social-media-icons .icon.facebook {
+    bottom: 400px;
+    left: 250px;
+  }
+  #about .social-media-icons .icon.instagram {
+    bottom: 400px;
+    right: 250px;
+  }
+  #about .social-media-icons .icon.tiktok {
+    top: 400px;
+    right: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about .social-media-icons .icon.youtube {
+    top: 300px;
+    left: 90px;
+  }
+  #about .social-media-icons .icon.facebook {
+    bottom: 400px;
+    left: 90px;
+  }
+  #about .social-media-icons .icon.instagram {
+    bottom: 400px;
+    right: 90px;
+  }
+  #about .social-media-icons .icon.tiktok {
+    top: 300px;
+    right: 90px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #about .social-media-icons .icon {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
 }
 
 @-webkit-keyframes sinkIn {
@@ -824,11 +913,12 @@ header label .hamburger span:last-of-type {
 }
 
 #youtube .channel .yt-link .yt-logo {
-  width: 220px;
+  width: 252px;
+  margin-top: -27px;
 }
 
 #youtube .channel .yt-link p {
-  color: lightseagreen;
+  color: honeydew;
   font-size: 22px;
   margin-left: 15px;
 }
@@ -853,5 +943,65 @@ header label .hamburger span:last-of-type {
   #youtube {
     height: auto;
   }
+}
+
+#contact {
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: honeydew;
+}
+
+#contact .container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#contact .container h2 {
+  color: darkslategray;
+  font-size: 72px;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: auto;
+  margin: 0 0 30px;
+}
+
+#contact .container p {
+  color: darkslategray;
+  font-size: 28px;
+  line-height: 1;
+}
+
+#contact .container .button {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  color: honeydew;
+  font-size: 48px;
+  line-height: 2;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  background-color: #008cdd;
+  -webkit-box-shadow: 0px 0px 12px 0px black;
+          box-shadow: 0px 0px 12px 0px black;
+  -webkit-transition: -webkit-box-shadow 0.2s linear;
+  transition: -webkit-box-shadow 0.2s linear;
+  transition: box-shadow 0.2s linear;
+  transition: box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
+}
+
+#contact .container .button:hover {
+  background-color: #253f3f;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#contact .container .button:active {
+  background-color: lightseagreen;
 }
 /*# sourceMappingURL=main.css.map */

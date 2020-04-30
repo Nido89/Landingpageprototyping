@@ -18,6 +18,7 @@ function menuColorChanger (){
 
             if(ib.y >= sb.y && ib.y+ib.height <= sb.y+sb.height){
                 let color = section.dataset.color;
+
                 switch (color) {
                     case 'dark':
                         item.classList.add('dark');
@@ -26,6 +27,7 @@ function menuColorChanger (){
                     case 'light':
                         break;
                     item.classList.remove('light')
+                    break;
                 }
             }
         }
