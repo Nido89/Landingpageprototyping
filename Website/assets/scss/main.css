@@ -11,7 +11,7 @@ body .top {
       align-self: flex-start;
   color: honeydew;
   font-size: 55px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 body .bottom {
@@ -40,7 +40,7 @@ body .light {
 
 body .navbar {
   position: fixed;
-  top: 50%;
+  top: 65%;
   left: 30px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -63,7 +63,7 @@ body .navbar {
 body .navbar .navbar__link {
   margin: 0 15px 30px;
   color: lightseagreen;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 100;
   text-decoration: none;
   -webkit-box-sizing: border-box;
@@ -478,30 +478,30 @@ header label .hamburger span:last-of-type {
 }
 
 #about .social-media-icons .icon.youtube {
-  top: 200px;
+  top: 100px;
   left: 550px;
-  background-image: url("/Website/assets/images/about/youtube.png");
+  background-image: url("./Website/assets/images/about/youtube.png");
   background-size: contain;
 }
 
 #about .social-media-icons .icon.facebook {
-  bottom: 200px;
+  bottom: 100px;
   left: 550px;
-  background-image: url("/Website/assets/images/about/facebook.png");
+  background-image: url("./Website/assets/images/about/facebook.png");
   background-size: 150px;
 }
 
 #about .social-media-icons .icon.instagram {
-  bottom: 200px;
+  bottom: 100px;
   right: 550px;
-  background-image: url("/Website/assets/images/about/instagram.png");
+  background-image: url("./Website/assets/images/about/instagram.png");
   background-size: 100px;
 }
 
 #about .social-media-icons .icon.tiktok {
-  top: 200px;
+  top: 100px;
   right: 550px;
-  background-image: url("/Website/assets/images/about/tiktok.png");
+  background-image: url("./Website/assets/images/about/tiktok.png");
   background-size: contain;
 }
 
@@ -839,7 +839,7 @@ header label .hamburger span:last-of-type {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  padding: 25px;
+  padding: 112px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: lightseagreen;
@@ -847,7 +847,7 @@ header label .hamburger span:last-of-type {
       justify-self: center;
   width: 100%;
   max-width: 620px;
-  font-size: 18px;
+  font-size: 15px;
   text-align: justify;
 }
 
@@ -955,7 +955,7 @@ header label .hamburger span:last-of-type {
 
 #contact .container {
   width: 100%;
-  max-width: 640px;
+  max-width: 540px;
   margin: 0 auto;
 }
 
@@ -965,13 +965,14 @@ header label .hamburger span:last-of-type {
   text-transform: uppercase;
   text-align: center;
   overflow: auto;
-  margin: 0 0 30px;
+  margin: 250px 1px 1px;
 }
 
 #contact .container p {
   color: darkslategray;
-  font-size: 28px;
+  font-size: 18px;
   line-height: 1;
+  text-align: center;
 }
 
 #contact .container .button {

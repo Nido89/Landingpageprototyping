@@ -134,39 +134,39 @@
             }
     
             &.youtube {
-                top: 200px;
+                top: 100px;
                 left: 550px;
     
     
-                background-image: url('/Website/assets/images/about/youtube.png');
+                background-image: url('./Website/assets/images/about/youtube.png');
                 background-size: contain;
     
             }
     
             &.facebook {
-                bottom: 200px;
+                bottom: 100px;
                 left: 550px;
     
-                background-image: url('/Website/assets/images/about/facebook.png');
+                background-image: url('./Website/assets/images/about/facebook.png');
                 background-size: 150px;
     
             }
     
             &.instagram {
-                bottom: 200px;
+                bottom: 100px;
                 right: 550px;
     
-                background-image: url('/Website/assets/images/about/instagram.png');
+                background-image: url('./Website/assets/images/about/instagram.png');
                 background-size: 100px;
     
             }
     
             &.tiktok {
-                top: 200px;
+                top: 100px;
                 right: 550px;
     
     
-                background-image: url('/Website/assets/images/about/tiktok.png');
+                background-image: url('./Website/assets/images/about/tiktok.png');
                 background-size: contain;
     
             }

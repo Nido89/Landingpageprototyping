@@ -8,7 +8,7 @@
 
     .container{
         width: 100%;
-        max-width: 640px;
+        max-width: 540px;
         margin: 0 auto;
 
 
@@ -19,12 +19,13 @@
             text-align: center;
             overflow: auto;
 
-            margin: 0 0 30px;
+            margin: 250px 1px 1px;
         }
         p{
             color: $dark;
-            font-size: 28px;
+            font-size: 18px;
             line-height: 1;
+            text-align: center;
         }
         .button{
             display: block;

@@ -12,7 +12,7 @@ body {
         align-self: flex-start;
         color: $primary;
         font-size: 55px;
-        font-weight: 900;
+        font-weight: 700;
     }
 
     .bottom {
@@ -44,7 +44,7 @@ body {
 
     .navbar {
         position: fixed;
-        top: 50%;
+        top: 65%;
         left: 30px;
         transform: translateY(-50%);
 
@@ -60,7 +60,7 @@ body {
             margin: 0 15px 30px;
 
             color: $light;
-            font-size: 28px;
+            font-size: 20px;
             font-weight: 100;
             text-decoration: none;
 
