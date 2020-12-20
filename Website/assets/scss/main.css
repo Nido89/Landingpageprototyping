@@ -480,28 +480,28 @@ header label .hamburger span:last-of-type {
 #about .social-media-icons .icon.youtube {
   top: 80px;
   left: 500px;
-  background-image: url("/Website/assets/images/about/youtube.png");
+  background-image: url("./Website/assets/images/about/youtube.png");
   background-size: contain;
 }
 
 #about .social-media-icons .icon.facebook {
   bottom: 80px;
   left: 500px;
-  background-image: url("/Website/assets/images/about/facebook.png");
+  background-image: url("./Website/assets/images/about/facebook.png");
   background-size: 150px;
 }
 
 #about .social-media-icons .icon.instagram {
   bottom: 80px;
   right: 500px;
-  background-image: url("/Website/assets/images/about/instagram.png");
+  background-image: url("./Website/assets/images/about/instagram.png");
   background-size: 100px;
 }
 
 #about .social-media-icons .icon.tiktok {
   top: 80px;
   right: 500px;
-  background-image: url("/Website/assets/images/about/tiktok.png");
+  background-image: url("./Website/assets/images/about/tiktok.png");
   background-size: contain;
 }
 
